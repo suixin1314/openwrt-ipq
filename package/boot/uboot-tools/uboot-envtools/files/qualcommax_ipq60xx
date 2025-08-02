@@ -13,6 +13,8 @@ case "$board" in
 cambiumnetworks,xe3-4)
 	ubootenv_add_mtd "0:APPSBLENV" "0x0" "0x10000" "0x10000"
 	;;
+cmiot,ax18|\
+zn,m2|\
 glinet,gl-ax1800|\
 glinet,gl-axt1800|\
 linksys,mr7350|\
