@@ -121,6 +121,13 @@ platform_do_upgrade() {
 	qihoo,360v6)
 		nand_do_upgrade "$1"
 		;;
+  	cmiot,ax18|\
+	zn,m2)
+		nand_do_upgrade "$1"
+		;;
+	*)
+		default_do_upgrade "$1"
+		;;
 	netgear,wax610|\
 	netgear,wax610y)
 		remove_oem_ubi_volume wifi_fw
