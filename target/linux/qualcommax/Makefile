@@ -6,10 +6,9 @@ BOARDNAME:=Qualcomm Atheros 802.11ax WiSoC-s
 FEATURES:=squashfs ramdisk fpu nand rtc emmc
 KERNELNAME:=Image
 CPU_TYPE:=cortex-a53
-SUBTARGETS:=ipq807x ipq60xx ipq50xx
+SUBTARGETS:=ipq807x ipq60xx
 
 KERNEL_PATCHVER:=6.6
-KERNEL_TESTING_PATCHVER:=6.12
 
 include $(INCLUDE_DIR)/target.mk
 DEFAULT_PACKAGES += \
@@ -18,7 +17,6 @@ DEFAULT_PACKAGES += \
 	kmod-qca-nss-dp kmod-ath11k-ahb \
 	wpad-basic-mbedtls uboot-envtools \
 	e2fsprogs kmod-fs-ext4 losetup \
-	kmod-qca-nss-drv kmod-qca-nss-ecm \
-	kmod-qca-nss-drv-bridge-mgr
+	nss-firmware-ipq6018 kmod-qca-mcs kmod-qca-nss-drv kmod-qca-nss-drv-pppoe kmod-qca-nss-ecm \
 
 $(eval $(call BuildTarget))
