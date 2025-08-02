@@ -40,6 +40,12 @@ netgear,wax610y)
 	ucidef_set_led_netdev "lan-port-link" "LAN-PORT-LINK" "green:lan-0" "lan" "link_10 link_100 link_1000 link_2500"
 	ucidef_set_led_netdev "lan-port-traffic" "LAN-PORT-TRAFFIC" "orange:lan-1" "lan" "tx rx link_10 link_100 link_1000 link_2500"
 	;;
+cmiot,ax18|\
+zn,m2)
+        ucidef_set_led_netdev "wan" "WAN" "blue:wan" "eth0"
+        ucidef_set_led_netdev "wlan2g" "WLAN2G" "blue:wlan2g" "wlan1"
+        ucidef_set_led_netdev "wlan5g" "WLAN5G" "blue:wlan5g" "wlan0"
+        ;;
 esac
 
 board_config_flush
