@@ -52,6 +52,14 @@ platform_do_upgrade() {
 		fw_setenv owrt_slotactive $((1 - active))
 		nand_do_upgrade "$1"
 		;;
+  	cmiot,ax18|\
+	zn,m2|\
+	qihoo,v6|\
+	redmi,ax5|\
+	xiaomi,ax1800|\
+	netgear,wax214)
+		nand_do_upgrade "$1"
+		;;
 	*)
 		default_do_upgrade "$1"
 		;;
